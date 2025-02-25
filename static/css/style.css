@@ -1,0 +1,67 @@
+/* Updated CSS for better dashboard layout */
+body {
+    background-color: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #ff9800;
+
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#data-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.data-group {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    text-align: left;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.data-box {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.1);
+}
+
+.data-box p {
+    font-size: 16px;
+    margin: 5px 0;
+}
