@@ -27,6 +27,11 @@ button {
     cursor: pointer;
     font-size: 16px;
     margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+button:hover {
+    background-color: #1405e6;
 }
 
 #copy-btn {
@@ -37,9 +42,10 @@ button {
         border: none;
         cursor: pointer;
         font-size: 16px;
+        border-radius: 18px;
 }
 #copy-btn:hover {
-        background-color: #45a049;
+        background-color: #100cf5;
 }
 
 
@@ -61,6 +67,7 @@ button {
 }
 
 h2 {
+    color: #dae90d;
     font-size: 22px;
     font-weight: bold;
     text-align: center;
