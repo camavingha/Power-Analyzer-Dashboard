@@ -1,0 +1,18 @@
+Timestamp,3-Phase Power Factor,Active 3-Phase Power,Apparent 3-Phase Power,Consume Active Energy,L1 (%)THD Current,L1 (%)THD Voltage,L1 Current,L1 Frequency,L1 Phase Voltage,L1/L2 Voltage,L2 (%)THD Current,L2 (%)THD Voltage,L2 Current,L2 Phase Voltage,L2/L3 Voltage,L3 (%)THD Current,L3 (%)THD Voltage,L3 Current,L3 Phase Voltage,L3/L1 Voltage,Neutral Current
+2025-02-25T07:50:57.219Z,N/A %,N/A W,N/A VA,N/A Wh,N/A %,N/A %,N/A mA,N/A Hz,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A mA
+2025-02-25T07:50:59.220Z,N/A %,N/A W,N/A VA,N/A Wh,N/A %,N/A %,N/A mA,N/A Hz,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A mA
+2025-02-25T07:51:01.209Z,N/A %,N/A W,N/A VA,N/A Wh,N/A %,N/A %,N/A mA,N/A Hz,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A mA
+2025-02-25T07:51:03.210Z,N/A %,N/A W,N/A VA,N/A Wh,N/A %,N/A %,N/A mA,N/A Hz,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A mA
+2025-02-25T07:51:05.221Z,N/A %,N/A W,N/A VA,N/A Wh,N/A %,N/A %,N/A mA,N/A Hz,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A mA
+2025-02-25T07:51:07.213Z,N/A %,N/A W,N/A VA,N/A Wh,N/A %,N/A %,N/A mA,N/A Hz,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A mA
+2025-02-25T07:51:09.215Z,N/A %,N/A W,N/A VA,N/A Wh,N/A %,N/A %,N/A mA,N/A Hz,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A mA
+2025-02-25T07:51:11.215Z,N/A %,N/A W,N/A VA,N/A Wh,N/A %,N/A %,N/A mA,N/A Hz,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A mA
+2025-02-25T07:51:13.217Z,N/A %,N/A W,N/A VA,N/A Wh,N/A %,N/A %,N/A mA,N/A Hz,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A mA
+2025-02-25T07:51:15.218Z,N/A %,N/A W,N/A VA,N/A Wh,N/A %,N/A %,N/A mA,N/A Hz,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A mA
+2025-02-25T07:51:17.215Z,N/A %,N/A W,N/A VA,N/A Wh,N/A %,N/A %,N/A mA,N/A Hz,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A mA
+2025-02-25T07:51:19.220Z,N/A %,N/A W,N/A VA,N/A Wh,N/A %,N/A %,N/A mA,N/A Hz,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A mA
+2025-02-25T07:51:21.211Z,N/A %,N/A W,N/A VA,N/A Wh,N/A %,N/A %,N/A mA,N/A Hz,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A mA
+2025-02-25T07:51:23.216Z,N/A %,N/A W,N/A VA,N/A Wh,N/A %,N/A %,N/A mA,N/A Hz,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A mA
+2025-02-25T07:51:25.218Z,N/A %,N/A W,N/A VA,N/A Wh,N/A %,N/A %,N/A mA,N/A Hz,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A mA
+2025-02-25T07:51:27.211Z,N/A %,N/A W,N/A VA,N/A Wh,N/A %,N/A %,N/A mA,N/A Hz,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A mA
+2025-02-25T07:51:29.215Z,N/A %,N/A W,N/A VA,N/A Wh,N/A %,N/A %,N/A mA,N/A Hz,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A %,N/A %,N/A mA,N/A V,N/A V,N/A mA

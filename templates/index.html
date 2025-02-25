@@ -8,8 +8,19 @@
 </head>
 <body>
     <h1>KMITL-CP Dashboard</h1>
-    <!-- <button onclick="fetchData()">Refresh Data</button> -->
+    <button id="toggle-btn">Start Logging</button>
+    
+    <!-- Export Controls -->
+    <select id="export-format">
+        <option value="csv">Export as CSV</option>
+        <option value="txt">Export as TXT</option>
+        <option value="pdf">Export as PDF</option>
+    </select>
+    <button id="export-btn" disabled>Export</button>
+    
     <div id="data-container"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
-</body>
-</html>
+    

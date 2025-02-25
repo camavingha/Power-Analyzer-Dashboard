@@ -1,5 +1,15 @@
 from flask import Flask, render_template, jsonify
 from modbus_client import ModbusClient
+from flask import request, send_file
+import csv
+import json
+from fpdf import FPDF
+import io
+import pdfkit
+from flask import Flask, render_template, jsonify, request, Response
+
+
+
 
 app = Flask(__name__)
 
@@ -37,6 +47,50 @@ def get_data():
 
     print("all data =>\n", data)
     return jsonify(data)
+
+@app.route('/export', methods=['POST'])
+def export_data():
+    data = request.get_json()
+    export_format = request.args.get('format', 'csv')
+
+    if not data:
+        return jsonify({"error": "No data to export"}), 400
+
+    # CSV Export
+    if export_format == 'csv':
+        output = io.StringIO()
+        writer = csv.writer(output)
+        writer.writerow(["Timestamp"] + list(data[0].keys())[1:])  # Header
+        for row in data:
+            writer.writerow(row.values())
+        return Response(output.getvalue(), mimetype="text/csv", headers={"Content-Disposition": "attachment;filename=export.csv"})
+
+    elif export_format == 'txt':
+        output = io.StringIO()
+        output.write("KMITL-CP Sensor Data Log\n")
+        output.write("=" * 40 + "\n")
+        for row in data:
+            output.write(f"Timestamp: {row['timestamp']}\n")
+            for key, value in row.items():
+                if key != "timestamp":
+                    output.write(f"{key}: {value}\n")
+                output.write("-" * 40 + "\n")
+
+        return Response(output.getvalue(), mimetype="text/plain",headers={"Content-Disposition": "attachment;filename=export.txt"})
+
+    elif export_format == 'pdf':
+        html_content = "<h1>Exported Data</h1><table border='1'><tr><th>Timestamp</th>"
+        html_content += "".join([f"<th>{key}</th>" for key in data[0].keys() if key != "timestamp"])
+        html_content += "</tr>"
+        for row in data:
+            html_content += "<tr><td>" + "</td><td>".join(map(str, row.values())) + "</td></tr>"
+        html_content += "</table>"
+
+        pdf = pdfkit.from_string(html_content, False)
+        return Response(pdf, mimetype="application/pdf", headers={"Content-Disposition": "attachment;filename=export.pdf"})
+
+    return jsonify({"error": "Invalid format"}), 400
+
 
 if __name__ == '__main__':
     app.run(debug=True)
