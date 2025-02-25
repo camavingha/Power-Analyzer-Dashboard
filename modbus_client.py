@@ -14,6 +14,34 @@ class ModbusClient:
             'timeout': 0.1
         }
 
+        # Register scaling factors and units
+        self.calibration_map = {
+            0x0000: (10, "V"),
+            0x0010: (10, "V"),
+            0x0020: (10, "V"),
+            0x003E: (10, "V"),
+            0x0040: (10, "V"),  
+            0x0042: (10, "V"),
+
+            0x0002: (1, "mA"),
+            0x0012: (1, "mA"),
+            0x0022: (1, "mA"),
+            0x0044: (1, "mA"),
+           
+            0x0046: (100, "%"),
+            0x0048: (100, "%"),
+            0x004A: (100, "%"),
+            0x004C: (100, "%"),
+            0x004E: (100, "%"),
+            0x0050: (100, "%"),
+            0x0030: (1, "W"),
+            0x0036: (1, "VA"),
+            0x0038: (100, "%"),
+            0x0060: (1, "Wh"),
+
+            0x003C: (100, "Hz")
+        }
+
     def calculate_crc(self, data):
         crc = 0xFFFF
         for byte in data:
@@ -49,9 +77,16 @@ class ModbusClient:
                 if response:
                     raw_bytes = response[3:-2]
                     decimal_value = int.from_bytes(raw_bytes, byteorder='big')
-                    return decimal_value
+
+                    # Apply calibration
+                    scale, unit = self.calibration_map.get(register, (1, ""))  # Default scale 1, unit empty
+                    calibrated_value = decimal_value / scale
+                    return f"{calibrated_value:.2f} {unit}"  # Round to 2 decimal places
                 else:
-                    return None
+                    # Return "N/A" but keep unit
+                    _, unit = self.calibration_map.get(register, (1, ""))
+                    return f"N/A {unit}"
         except Exception as e:
             print(f"Error: {e}")
-            return None
+            _, unit = self.calibration_map.get(register, (1, ""))
+            return f"N/A {unit}"
